@@ -1,0 +1,14 @@
+{
+  "name": "MIDI Converter",
+  "version": "0.1",
+  "author": "Maximillian von Briesen",
+  "description": "A node library for converting back and forth between midi and json.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mobyvb/midi-converter"
+  },
+  "dependencies": {
+    "jsmidgen":"*",
+    "midi-file-parser":"*"
+  }
+}
