@@ -1,4 +1,11 @@
 # MIDI Converter
+### Installing dependencies:
+`npm install`
+
+The library [midi-file-parser](https://github.com/NHQ/midi-file-parser) is used for getting JSON from MIDI files.
+
+The library [jsmidgen](https://github.com/dingram/jsmidgen) is used to generate MIDI files.
+
 ### Converting from MIDI to JSON:
 `node midi-to-json.js [from] [to]`
 
