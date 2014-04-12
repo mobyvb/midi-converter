@@ -1,17 +1,17 @@
 # MIDI Converter
-### Installing dependencies:
-`npm install`
-
-The library [midi-file-parser](https://github.com/NHQ/midi-file-parser) is used for getting JSON from MIDI files.
-
-The library [jsmidgen](https://github.com/dingram/jsmidgen) is used to generate MIDI files.
+### Installing:
+`npm install midi-converter`
 
 ### Converting from MIDI to JSON:
-`node midi-to-json.js [from] [to]`
-
-Where `[from]` is the path to a MIDI file and `[to]` is the path to a JSON file. If omitted, they default to `song.mid` and `song.json`, respectively.
+    var fs = require('fs');
+    var midiConverter = require('midi-converter');
+    var midiSong = fs.readFileSync('example.mid', 'binary');
+    var jsonSong = midiConverter.midiToJson(midiSong);
+    fs.writeFileSync(to, jsonSong);
 
 ### Converting from JSON to MIDI:
-`node json-to-midi.js [from] [to]`
-
-Where `[from]` is the path to a JSON file and `[to]` is the path to a MIDI file. If omitted, they default to `song.json` and `song.midi`, respectively.
+    var fs = require('fs');
+    var midiConverter = require('midi-converter');
+    var jsonSong = require('./example.json');
+    var midiSong = midiConverter.jsonToMidi(jsonSong);
+    fs.writeFileSync('example.mid', midiSong, 'binary');
