@@ -7,7 +7,7 @@
     var midiConverter = require('midi-converter');
     var midiSong = fs.readFileSync('example.mid', 'binary');
     var jsonSong = midiConverter.midiToJson(midiSong);
-    fs.writeFileSync(to, jsonSong);
+    fs.writeFileSync('example.json', JSON.stringify(jsonSong));
 
 ### Converting from JSON to MIDI:
     var fs = require('fs');
