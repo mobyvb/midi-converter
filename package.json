@@ -1,6 +1,6 @@
 {
   "name": "midi-converter",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "author": "Maximillian von Briesen",
   "description": "A node library for converting back and forth between midi and json.",
   "main": "./lib/midi-converter.js",
